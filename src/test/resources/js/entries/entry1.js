@@ -1,0 +1,1 @@
+goog.require("com.bs.App1");
