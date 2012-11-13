@@ -57,7 +57,7 @@ public class DepsMojo extends AbstractMojo{
 		}
 		
 		String[] commands = new String[]{"python", 
-				closureBaseDir+"/bin/build/depswriter.py",
+				closureBaseDir+"/closure/bin/build/depswriter.py",
 				"--root_with_prefix="+customBaseDir+" "+depsPrefix,
 				"--output_file="+outDepsfile};
 		Executor.execute(log,commands);

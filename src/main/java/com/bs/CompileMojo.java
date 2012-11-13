@@ -50,6 +50,13 @@ public class CompileMojo extends AbstractMojo{
      */
 	String[] namespaces;
 	
+	/**
+     * values of ADVANCED_OPTIMIZATIONS SIMPLE_OPTIMIZATIONS WHITESPACE_ONLY
+     *
+     * @parameter
+     */
+	String compilationLevel;
+	
 	private Log log; 
 	
 	@Override
@@ -74,7 +81,7 @@ public class CompileMojo extends AbstractMojo{
 					"--namespace="+ns,
 					"--output_mode=compiled",
 					"--compiler_jar="+compilerJarfile,
-					"--compiler_flags=--compilation_level=ADVANCED_OPTIMIZATIONS",
+					"--compiler_flags=--compilation_level="+compilationLevel,
 					"--output_file="+outName};
 			Executor.execute(log,commands);
 		}
