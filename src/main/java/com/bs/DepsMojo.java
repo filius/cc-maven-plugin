@@ -53,7 +53,7 @@ public class DepsMojo extends AbstractMojo{
 			Files.createParentDirs(out);
 			Files.touch(out);
 		}catch(Exception e){
-			throw new MojoExecutionException("Error create ["+outDepsfile+"] file");
+			throw new MojoExecutionException("Error create ["+outDepsfile+"] file", e);
 		}
 		
 		String[] commands = new String[]{"python", 
